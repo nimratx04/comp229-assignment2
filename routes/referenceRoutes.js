@@ -8,6 +8,16 @@ const {
     deleteReference
 } = require('../controllers/referenceController');
 
+// Check if all controllers are imported correctly
+console.log('Controllers imported:', {
+    getAllReferences: typeof getAllReferences,
+    getReferenceById: typeof getReferenceById,
+    createReference: typeof createReference,
+    updateReference: typeof updateReference,
+    deleteReference: typeof deleteReference
+});
+
+// Define routes
 router.route('/')
     .get(getAllReferences)
     .post(createReference);
